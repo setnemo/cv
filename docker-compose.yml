@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  creator:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: 'repeat-bot-worker'
+    restart: always
+    volumes:
+      - .:/app/
+    logging:
+      options:
+        max-size: "10m"

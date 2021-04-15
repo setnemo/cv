@@ -1,0 +1,37 @@
+name: CV Creator
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+      - uses: actions/cache@v1
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+      - name: Composer validate
+        run: composer validate
+      - name: Composer Install
+        run: composer install --dev --no-interaction --no-ansi --prefer-dist --no-suggest --ignore-platform-reqs
+      - name: Build the docker-compose stack
+        run: docker-compose up -d
+      - name: Create CV
+        run: |
+          docker-compose exec -T creator php create.php
+      - name: Commit to the repo
+        run: |
+          git config --global user.name "omentes/cv"
+          git config --global user.email "cv[bot]@omentes.github.com"
+          git add .
+          # "echo" returns true so the build succeeds, even if no changed files
+          git commit -m 'Update cv' || echo
+          git push

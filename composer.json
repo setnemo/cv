@@ -1,0 +1,15 @@
+{
+  "name": "omentes/cv",
+  "description": "My CV creator",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "omentes",
+      "email": "setnemo@gmail.com"
+    }
+  ],
+  "require": {
+    "mpdf/mpdf": "^8.0"
+  }
+}
