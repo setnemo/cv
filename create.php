@@ -6,8 +6,8 @@ $mpdf = new \Mpdf\Mpdf([
     'format' => 'A4',
     'margin_left' => 7,
     'margin_right' => 7,
-    'margin_top' => 3,
-    'margin_bottom' => 3,
+    'margin_top' => 5,
+    'margin_bottom' => 5,
     'margin_header' => 0,
     'margin_footer' => 0,
 ]);
