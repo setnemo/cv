@@ -11,7 +11,6 @@
         body { font: 12px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
         .clear { clear: both; }
         #page-wrap { width: 900px; margin: 40px auto 60px; }
-        #pic { float: right; margin: -150px 40px 0 0; width: 250px}
         h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 32px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
         h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
         h4 { font-size: 14px; margin: 0 0 6px 0; position: relative; }
@@ -20,14 +19,17 @@
         a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
         a:hover { border-bottom-style: solid; color: black; }
         ul { margin: 0 0 10px 10px; }
-        #objective { width: 400px; float: left; }
-        #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
+        #objective p {font-family: Georgia, Serif; font-style: italic; color: #666; }
         dt { font-style: italic; font-weight: bold; font-size: 12px; text-align: right; padding: 0 10px 0 0; width: 90px; float: left; height: 80px; border-right: 1px solid #999;  }
-        #exp {height: 460px;}
-        #tech {height: 175px;}
-        #pet {height: 440px;}
-        #pub {height: 270px;}
-        dd { width: 580px; float: right; }
+        #commercial-experience {height: 460px;}
+        #technologies {height: 170px;}
+        #pet-projects {height: 350px;}
+        #publications {height: 320px;}
+        #license {height: 40px;}
+        #languages {height: 90px;}
+        #volunteer {height: 100px;}
+        dd { width: 570px; float: right; }
+
         dd.clear { float: none; margin: 0; height: 15px; }
      </style>
 </head>
@@ -45,7 +47,7 @@
         </div>
         <div id="objective"  style="float: left">
             <p>
-                I have been working in the web industry for the past six years.
+                I have been working in the web industry for the past experience_years years.
                 I write a code according to SOLID, KISS, YAGNI, DRY.
                 I publish all my pet projects on github as I adore open source.
                 I am a backend developer and I fancy creating telegram bots.
@@ -53,11 +55,10 @@
                 This CV was <a href="https://github.com/omentes/cv">created</a> on PHP with Github Actions as I can't live without automation.
             </p>
         </div>
-        <img src="images/photo.jpg" alt="Photo of Cthulu" id="pic" />
         <div class="clear"></div>
         <dl>
             <dd class="clear"></dd>
-            <dt id="tech">Technologies</dt>
+            <dt id="technologies">Technologies</dt>
             <dd>
                 <p><strong>PHP:</strong> OOP, SOLID, REST, TDD, PHPDoc, PSR, MVC, Composer, Laravel<br />
                     <strong>DB:</strong> MySQL, PostgreSQL, Redis<br />
@@ -69,7 +70,7 @@
                 </p>
             </dd>
             <dd class="clear"></dd>
-            <dt id="exp">Experience</dt>
+            <dt id="commercial-experience">Experience</dt>
             <dd>
                 <h4>PHP Developer at Digitex <span>Kyiv, Ukraine - 04/2021 - Present</span></h4>
                 <ul>
@@ -103,67 +104,61 @@
                     UNIT Factory StudHub. Volunteering in Exam. Event organization. Meet-up organization.</p>
             </dd>
             <dd class="clear"></dd>
-            <dt id="pet">Pet projects</dt>
+            <dt id="pet-projects">Pet projects</dt>
             <dd>
-                <h4>Repeat Word Bot <a><a href="https://t.me/RepeatWordBot">https://t.me/RepeatWordBot</a></h4>
+                <h4>Repeat Word Bot <a href="https://t.me/RepeatWordBot">https://t.me/RepeatWordBot</a></h4>
                 <ul>
                     <li>Telegram bot to help you repeat new English words and learn pronunciation</li>
                     <li>PHP, Doctrine, MySQL, Redis, Codeception, Docker, Github Actions</li>
                 </ul>
-                <br />
-                <h4>Currencies in UA Bot <a><a href="https://t.me/CurrencyUA_bot">https://t.me/CurrencyUA_bot</a></h4>
+                <h4>Currencies in UA Bot <a href="https://t.me/CurrencyUA_bot">https://t.me/CurrencyUA_bot</a></h4>
                 <ul>
                     <li>Currency conversion inline for Ukraine</li>
                     <li>PHP, MySQL, Redis, Api integrations, Docker</li>
                 </ul>
-                <br />
-                <h4>Asterios RB bot <a><a href="https://github.com/omentes/asterios-bot">https://github.com/omentes/asterios-bot</a></h4>
+                <h4>Asterios RB bot <a href="https://github.com/omentes/asterios-bot">https://github.com/omentes/asterios-bot</a></h4>
                 <ul>
                     <li>Bot that helps players from Asterios Lineage II Server</li>
                     <li>PHP, MySQL, Redis, Codeception, Docker, Github Actions</li>
                 </ul>
-                <br />
-                <h4>Cheatera (/closed)<a><a href="https://cheatera.pp.ua">https://cheatera.pp.ua</a></h4>
+                <h4>Begone <a href="https://github.com/setnemo/bygone">github.com/setnemo/bygone</a></h4>
                 <ul>
-                    <li>Website statistics on students in UNIT Factory (Ecole 42)</li>
-                    <li>Consists of two subproject: filling the database with scripts on Python via cron,
-                        and a web site for viewing information written in php, Yii2.</li>
+                    <li>Archive your old repositories to one repo (git history included) with Github Actions</li>
+                    <li>bash, git, Github Actions</li>
                 </ul>
             </dd>
             <dd class="clear"></dd>
-            <dt id="pub">Publications</dt>
+            <dt id="publications">Publications</dt>
             <dd>
-                <h4>Введение в метрики для PHP разработчика </h4>
-                <p><a href="https://habr.com/ru/post/544582/">https://habr.com/ru/post/544582/</a></p>
-                <p>Цель статьи познакомить читателя с принципами работы с метриками на php. В рамках статьи подготовлен готовый мини-проект в докер.</p>
-                <br />
-                <h4>Рефакторинг пет проекта: докеризация, метрики, тесты</h4>
-                <p><a href="https://habr.com/ru/post/542978/">https://habr.com/ru/post/542978/</a></p>
-                <p>История как я рефакторил один из своих телеграм ботов, который из поделки на коленке стал сервисом с более чем 1000 пользователей в очень узкой и специфической аудитории.</p>
+                <h4>There King Kashchei withers over gold, or how to save all old repositories into one including git history (RU)</h4>
+                <a href="https://habr.com/ru/post/542978/">https://habr.com/ru/post/570404/</a>
+                <p>Archive your old repositories to one repo (git history included) with Github Actions</p>
+                <h4>Introduction to Metrics for PHP Developer (RU)</h4>
+                <a href="https://habr.com/ru/post/544582/">https://habr.com/ru/post/544582/</a>
+                <p>The purpose of the article is to acquaint the reader with the principles of working with metrics in php. A ready-made mini-project in docker has been prepared for the article.</p>
+                <h4>Refactoring a pet project: dockerization, metrics, tests (RU)</h4>
+                <a href="https://habr.com/ru/post/542978/">https://habr.com/ru/post/542978/</a>
+                <p>The story of how I refactored one of my telegram bots, which from a makeshift turned into a service with more than 1000 users in a very narrow and specific audience.</p>
             </dd>
             <dd class="clear"></dd>
-            <dt>Languages</dt>
+            <dt id="languages">Languages</dt>
             <dd>
-                <ul>
-                    <li><strong>English</strong> - Elementary proficiency</li>
-                    <li><strong>Russian</strong> - Native or bilingual proficiency</li>
-                    <li><strong>Ukrainian</strong> - Full professional proficiency</li>
-                </ul>
+                <p><strong>English</strong> - Elementary proficiency</p>
+                <p><strong>Russian</strong> - Native or bilingual proficiency</p>
+                <p><strong>Ukrainian</strong> - Full professional proficiency</p>
             </dd>
             <dd class="clear"></dd>
-            <dt>Licenses & certifications</dt>
+            <dt id="license">Licenses & certifications</dt>
             <dd>
-                <ul>
-                    <li>Coursera: C++ Development Fundamentals: White Belt <a href="https://www.coursera.org/account/accomplishments/verify/4EHBXUV4TPF7">Link</a></li>
-                </ul>
+                <p>Coursera: C++ Development Fundamentals: White Belt <a href="https://www.coursera.org/account/accomplishments/verify/4EHBXUV4TPF7">Link</a></p>
             </dd>
-<!--             <dd class="clear"></dd>
             <dd class="clear"></dd>
-            <dt>Volunteer experience</dt>
+            <dt id="volunteer">Volunteer experience</dt>
             <dd>
-                <h4>Volonteer "Обед Без Бед" at Жизнелюб</h4>
+                <h4>SuperGrandchildren at Happy Lunch </h4>
+                <p><a href="https://www.happyold.com.ua/en/project/obed-bez-bed">CO "Lifelover"</a></p>
                 <p><span>Kyiv, Ukraine - 05/2019 - 03/2020</span></p>
-            </dd> -->
+            </dd>
             <dd class="clear"></dd>
         </dl>
         <div class="clear"></div>
