@@ -8,23 +8,25 @@
      <title>Artem Pakhomov - Lead PHP developer</title>
      <style type="text/css">
         * { margin: 0; padding: 0; }
-        body { font: 12px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
+        body { font: 12px Helvetica, Sans-Serif; line-height: 18px; background: url(images/noise.jpg); }
         .clear { clear: both; }
         #page-wrap { width: 900px; margin: 40px auto 60px; }
+        #pic { float: right; margin: -150px 20px 0 0; width: 150px}
         h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 32px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
         h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
         h4 { font-size: 14px; margin: 0 0 6px 0; position: relative; }
-        h4 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 12px; color: #999; font-weight: normal; }
+        h4 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif,serif; font-size: 12px; color: #999; font-weight: normal; }
         p { margin: 0 0 12px 0; }
         a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
+        .empty { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
         a:hover { border-bottom-style: solid; color: black; }
         ul { margin: 0 0 10px 10px; }
-        #objective p {font-family: Georgia, Serif; font-style: italic; color: #666; }
+        #objective p {font-family: Georgia, Serif,serif; font-style: italic; margin: 20px 0; color: #666; }
         dt { font-style: italic; font-weight: bold; font-size: 12px; text-align: right; padding: 0 10px 0 0; width: 90px; float: left; height: 80px; border-right: 1px solid #999;  }
-        #commercial-experience {height: 460px;}
-        #technologies {height: 170px;}
-        #pet-projects {height: 350px;}
-        #publications {height: 320px;}
+        #commercial-experience {height: 480px;}
+        #technologies {height: 130px;}
+        #pet-projects {height: 280px;}
+        #publications {height: 270px;}
         #license {height: 40px;}
         #languages {height: 90px;}
         #volunteer {height: 100px;}
@@ -37,14 +39,16 @@
 <body>
     <div id="page-wrap">
         <div id="contact-info" class="vcard"  style="float: left">
-            <h1 class="fn">Artem Pakhomov</h1>
-            <h2 class="fn">Lead PHP Developer from Kyiv, Ukraine</h2>
+            <h1>Artem Pakhomov</h1>
+            <h2>Lead PHP Developer from Kyiv, Ukraine</h2>
             <p>
-                Phone: <a class="tel" href="tel:+380500279300">+380 (50) 027-93-00</a><br />
-                Email: <a class="email" href="mailto:setnemo@gmail.com">setnemo@gmail.com</a><br />
-                Github: <a class="git" href="https://github.com/setnemo">https://github.com/setnemo</a><br />
+                Phone: <a href="tel:+380500279300">+380 (50) 027-93-00</a><br />
+                Email: <a href="mailto:setnemo@gmail.com">setnemo@gmail.com</a><br />
+                Github: <a href="https://github.com/setnemo">https://github.com/setnemo</a><br />
+                Other Social Media: <span class="empty">@setnemo</span><br />
             </p>
         </div>
+        <img id="pic" src="images/photo.jpg" alt="Artem Pakhomov"/>
         <div id="objective"  style="float: left">
             <p>
                 I have been working in the web industry for the past experience_years years.
@@ -52,7 +56,8 @@
                 I'm publishing all my pet projects on Github as I adore open source.
                 I'm a backend developer, and I fancy creating telegram bots.
                 I began studying to play piano during the lockdown.
-                This CV was <a href="https://github.com/setnemo/cv">created</a> on PHP with Github Actions as I can't live without automation.
+                This CV was <a href="https://github.com/setnemo/cv">created</a> on PHP with GitHub Actions as I can't live without automation.
+                I am married, have 2 kids and 3 cats. I like to spend time with my family, read books, watch TV series.
             </p>
         </div>
         <div class="clear"></div>
@@ -61,45 +66,48 @@
             <dt id="technologies">Technologies</dt>
             <dd>
                 <p><strong>PHP:</strong> OOP, SOLID, REST, TDD, PHPDoc, PSR, MVC, Composer, Laravel<br />
-                    <strong>DB:</strong> MySQL, PostgreSQL, Redis<br />
+                    <strong>DB and Brokers:</strong> MySQL, PostgreSQL, Redis, RabbitMQ<br />
                     <strong>Tests:</strong> PHPUnit, Codeception<br />
-                    <strong>Git:</strong> unserstand rebase, reflog, squash, cherry-pick, soft/hard reset, etc<br />
-                    <strong>Unix:</strong> used ArchLinux, Debian, MacOS, vim, grep, sed, ssh, etc<br />
+                    <strong>Git:</strong> understand rebase, reflog, squash, cherry-pick, soft/hard reset, etc<br />
+                    <strong>Unix:</strong> used ArchLinux, Debian, Mint, Ubuntu, macOS, vim, grep, sed, awk, ssh, etc<br />
                     <strong>Containers:</strong> docker, k8s<br />
-                    <strong>Dev environment:</strong> nginx/docker, Postman, PHPStorm, xDebug<br />
+                    <strong>Dev environment:</strong> nginx/docker, Postman, PHPStorm, xDebug, Makefile<br />
                 </p>
             </dd>
             <dd class="clear"></dd>
             <dt id="commercial-experience">Experience</dt>
             <dd>
-                <h4>Lead PHP Developer at Digitex <span>Kyiv, Ukraine - 04/2021 - Present</span></h4>
+                <h4>Lead PHP Developer at Blockster <span>Kyiv, Ukraine - 04/2021 - Present ~ 1 year</span></h4>
                 <ul>
-                    <li>writing code with tests and documentation, working with queues, dockerize services, configure CI, etc</li>
-                    <li>provide changes for processes: move gitlab issues to Jira, create workflows for all colleagues(design/development/qa), taught colleagues use it.</li>
+                    <li>I was implemented the way which was provided migration from old legacy code (white label) to the modern application (Laravel)</li>
+                    <li>I was implemented a metrics (raw data to Postgres, aggregated to Prometheus) and an experiment (for A/B testing on backend) system, which provides more understanding about user experience with our product</li>
+                    <li>I was mentored the backend developers team (~5 backend) and helped other teams with processes, cross-team developing, sharing knowledge</li>
+                    <li>I was provided changes for processes: move gitlab issues to Jira (create automation), create workflows for all colleagues(design/development/qa), taught colleagues use it.</li>
+                    <li>I was created some automation for a lot of things, which made more clearly and useful decomposition/developing/testing/duty flow</li>
                 </ul>
-                <h4>PHP Developer at airSlate Inc <span>Kyiv, Ukraine - 05/2019 - 04/2021</span></h4>
+                <h4>PHP Developer at airSlate Inc <span>Kyiv, Ukraine - 05/2019 - 04/2021 ~2 years</span></h4>
                 <ul>
-                    <li>writing code with tests and documentation, code review</li>
-                    <li>deploying on dev/rc for testing, deploy release on prod</li>
-                    <li>configuring alert rules and checking the cause of alerts, working with metrics (tech and business)</li>
+                    <li>I wrote code with tests and documentation, made code review</li>
+                    <li>I deployed on dev/rc for testing, deployed releases on production</li>
+                    <li>I configured alert rules and checking the cause of alerts, working with metrics (tech and business)</li>
                 </ul>
-                <h4>PHP Developer at Wallet Factory <span>Kyiv, Ukraine - 01/2019 - 05/2019</span></h4>
+                <h4>PHP Developer at Wallet Factory <span>Kyiv, Ukraine - 01/2019 - 05/2019 ~6 months</span></h4>
                 <ul>
                     <li>Back-end development for a Fin-tech mobile application.</li>
                     <li>PHP 7+, OpenSSL, payments API integrations</li>
                     <li>API integrations for sales/discounting etc</li>
                 </ul>
-                <h4>PHP Developer at MakeTop <span>Kyiv, Ukraine - 05/2015 - 12/2018</span></h4>
+                <h4>PHP Developer at MakeTop <span>Kyiv, Ukraine - 05/2015 - 12/2018 ~3,5 years</span></h4>
                 <ul>
-                    <li>writing implementation for search engine optimization</li>
-                    <li>working with Opencart, Wordpress, etc.</li>
+                    <li>I wrote implementation for search engine optimization</li>
+                    <li>I was working with popular CMS and self-hosted websites.</li>
                 </ul>
             </dd>
             <dd class="clear"></dd>
             <dt>Education</dt>
             <dd>
                 <h4>Software Architect <span>UNIT Factory, Kyiv - 09/2017 - 11/2018</span></h4>
-                <p>I am in the top 5 students of UNIT Factory (course 2017), I completed the 3-year program in 1 year.
+                <p>I was one of 5 students with the best marks in UNIT Factory (course 2017), I completed the 3-year program (Ecole 42, France) in 1 year.
                     UNIT Factory StudHub. Volunteering in Exam. Event organization. Meet-up organization.</p>
             </dd>
             <dd class="clear"></dd>
@@ -107,8 +115,8 @@
             <dd>
                 <h4>Repeat Word Bot <a href="https://t.me/RepeatWordBot">https://t.me/RepeatWordBot</a></h4>
                 <ul>
-                    <li>Telegram bot to help you repeat new English words and learn pronunciation</li>
-                    <li>PHP, Doctrine, MySQL, Redis, Codeception, Docker, Github Actions</li>
+                    <li>Telegram bo which help you revise new English words and learn pronunciation</li>
+                    <li>PHP, Doctrine, MySQL, Redis, Codeception, Docker, GitHub Actions</li>
                 </ul>
                 <h4>Currencies in UA Bot <a href="https://t.me/CurrencyUA_bot">https://t.me/CurrencyUA_bot</a></h4>
                 <ul>
@@ -117,7 +125,7 @@
                 </ul>
                 <h4>Asterios RB bot <a href="https://github.com/setnemo/asterios-bot">https://github.com/setnemo/asterios-bot</a></h4>
                 <ul>
-                    <li>Bot that helps players from Asterios Lineage II Server</li>
+                    <li>Bot that helps more than <a href="https://t.me/asteriosx5rb">2000 players</a> from Asterios Lineage II Server</li>
                     <li>PHP, MySQL, Redis, Codeception, Docker, Github Actions</li>
                 </ul>
                 <h4>Begone <a href="https://github.com/setnemo/bygone">github.com/setnemo/bygone</a></h4>
@@ -142,7 +150,7 @@
             <dd class="clear"></dd>
             <dt id="languages">Languages</dt>
             <dd>
-                <p><strong>English</strong> - Elementary proficiency</p>
+                <p><strong>English</strong> - Professional proficiency, (fluent intermediate)</p>
                 <p><strong>Russian</strong> - Native or bilingual proficiency</p>
                 <p><strong>Ukrainian</strong> - Full professional proficiency</p>
             </dd>

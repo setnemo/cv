@@ -24,14 +24,10 @@ RUN docker-php-ext-install gd && \
 
 RUN pecl install mcrypt-1.0.4
 
-# Install PHP Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Remove Cache
 RUN rm -rf /var/cache/apk/*
 
 VOLUME ["/app"]
 
 WORKDIR /app
-
-RUN composer install
