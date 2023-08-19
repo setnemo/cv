@@ -24,11 +24,12 @@
         #objective p {font-family: Georgia, Serif,serif; font-style: italic; margin: 20px 0; color: #666; }
         dt { font-style: italic; font-weight: bold; font-size: 12px; text-align: right; padding: 0 10px 0 0; width: 90px; float: left; height: 80px; border-right: 1px solid #999;  }
         #commercial-experience {height: 550px;}
+        #commercial-experience-2 {height: 160px;}
         #technologies {height: 130px;}
         #pet-projects {height: 280px;}
         #publications {height: 270px;}
         #license {height: 40px;}
-        #languages {height: 90px;}
+        #languages {height: 60px;}
         #volunteer {height: 470px;}
         dd { width: 570px; float: right; }
 
@@ -40,12 +41,12 @@
     <div id="page-wrap">
         <div id="contact-info" class="vcard"  style="float: left">
             <h1>Artem Pakhomov</h1>
-            <h2>Lead PHP Developer from Kyiv, Ukraine</h2>
+            <h2>Lead PHP Developer from Ukraine</h2>
             <p>
                 Phone: <a href="tel:+380500279300">+380 (50) 027-93-00</a><br />
                 Email: <a href="mailto:setnemo@gmail.com">setnemo@gmail.com</a><br />
                 Github: <a href="https://github.com/setnemo">https://github.com/setnemo</a><br />
-                Other Social Media: <span class="empty">@setnemo</span><br />
+                LinkedIn: <a href="https://www.linkedin.com/in/setnemo/">Artem Pakhomov</a><br />
             </p>
         </div>
         <img id="pic" src="images/photo.jpg" alt="Artem Pakhomov"/>
@@ -59,7 +60,6 @@
                 From 01/2023 - I was COO of "Let's See The Victory."
                 Charity Foundation works on a project with neuroprosthesis for blind people.
                 This CV was <a href="https://github.com/setnemo/cv">created</a> on PHP with GitHub Actions, as I can't live without automation.
-                I am married and have two kids and three cats. I like to spend time with my family, read books, and watch TV series.
             </p>
         </div>
         <div class="clear"></div>
@@ -81,7 +81,9 @@
             <dd>
                 <h4>Senior PHP Developer at NDA (~300 mln users) <span>Remote, Ukraine - 04/2022 - Present</span></h4>
                 <ul>
-                    <li>Anti-Fraud department. Project details are prohibited by non-disclosure agreement</li>
+                    <li>Anti-Fraud department tasks</li>
+                    <li>With my team, I created a system of automatic selection of the optimal task, which is ideal for execution at a specific moment for a specific co-worker. For the calculation, we used more than 5 levers converted into percentiles to obtain the sum of importance for each type of task. The employee had to choose one of 24 types of tasks, and this system allowed to choose the most optimal type of task, taking into account such options as how long the employee has been doing the same, how long this task has been waiting for completion, what is the average performance of the employee for this type of tasks, etc.</li>
+                    <li>Other project details are prohibited by non-disclosure agreement</li>
                 </ul>
                 <h4>Lead PHP Developer at Blockster <span>Kyiv, Ukraine - 04/2021 - 03/2022 ~1 year</span></h4>
                 <ul>
@@ -96,6 +98,10 @@
                     <li>I wrote code with tests and documentation, made code review. I deployed on dev/rc for testing, deployed releases on production</li>
                     <li>I configured alert rules and checking the cause of alerts, working with metrics</li>
                 </ul>
+            </dd>
+            <dd class="clear"></dd>
+            <dt id="commercial-experience-2">Experience</dt>
+            <dd>
                 <h4>PHP Developer at Wallet Factory <span>Kyiv, Ukraine - 01/2019 - 05/2019 ~6 months</span></h4>
                 <ul>
                     <li>Back-end development for a Fin-tech mobile application.</li>
@@ -116,54 +122,12 @@
                     UNIT Factory StudHub. Volunteering in Exam. Event organization. Meet-up organization.</p>
             </dd>
             <dd class="clear"></dd>
-            <dt id="pet-projects">Pet projects</dt>
-            <dd>
-                <h4>Repeat Word Bot <a href="https://t.me/RepeatWordBot">https://t.me/RepeatWordBot</a></h4>
-                <ul>
-                    <li>Telegram bo which help you revise new English words and learn pronunciation</li>
-                    <li>PHP, Doctrine, MySQL, Redis, Codeception, Docker, GitHub Actions</li>
-                </ul>
-                <h4>Currencies in UA Bot <a href="https://t.me/CurrencyUA_bot">https://t.me/CurrencyUA_bot</a></h4>
-                <ul>
-                    <li>Currency conversion (inline) for Ukraine</li>
-                    <li>PHP, MySQL, Redis, Api integrations, Docker</li>
-                </ul>
-                <h4>Asterios RB bot <a href="https://github.com/setnemo/asterios-bot">https://github.com/setnemo/asterios-bot</a></h4>
-                <ul>
-                    <li>Bot that helps more than <a href="https://t.me/asteriosx5rb">2000 players</a> from Asterios Lineage II Server</li>
-                    <li>PHP, MySQL, Redis, Codeception, Docker, Github Actions</li>
-                </ul>
-                <h4>Begone <a href="https://github.com/setnemo/bygone">github.com/setnemo/bygone</a></h4>
-                <ul>
-                    <li>Archive your old repositories to one repo (git history included) with Github Actions</li>
-                    <li>bash, git, Github Actions</li>
-                </ul>
-            </dd>
-            <dd class="clear"></dd>
-<!--             <dt id="publications">Publications</dt>
-            <dd>
-                <h4>There, Tsar Kashchei wasted away over gold; or how to save all old repositories into one including git history (Russian)</h4>
-                <a href="http://web.archive.org/web/20210217162014/https://habr.com/ru/post/542978/">https://habr.com/ru/post/570404/</a>
-                <p>Archive your old repositories to one repo (git history included) with Github Actions. The article was removed by myself after russia started to missiles at Ukraine</p>
-                <h4>Introduction to Metrics for PHP Developer (Russian)</h4>
-                <a href="http://web.archive.org/web/20210419200454/https://habr.com/ru/post/544582/">https://habr.com/ru/post/544582/</a>
-                <p>The purpose of the article is to acquaint the reader with the principles of working with metrics in php. A ready-made mini-project in docker has been prepared for the article. The article was removed by myself after russia started to missiles at Ukraine</p>
-                <h4>Refactoring a pet project: dockerization, metrics, tests (Russian)</h4>
-                <a href="http://web.archive.org/web/20210217162014/https://habr.com/ru/post/542978/">https://habr.com/ru/post/542978/</a>
-                <p>The story of how I refactored one of my telegram bots, which from a makeshift turned into a service with more than 1000 users in a very narrow and specific audience. The article was removed by myself after russia started to missiles at Ukraine</p>
-            </dd>
-            <dd class="clear"></dd> -->
             <dt id="languages">Languages</dt>
             <dd>
                 <p><strong>English</strong> - Professional proficiency, (fluent intermediate)</p>
-                <p><strong>Ukrainian</strong> - Native or bilingual proficiency</p>
+                <p><strong>Ukrainian</strong> - Native</p>
             </dd>
             <dd class="clear"></dd>
-<!--            <dt id="license">Licenses & certificatioomentesns</dt>-->
-<!--            <dd>-->
-<!--                <p>Coursera: C++ Development Fundamentals: White Belt <a href="https://www.coursera.org/account/accomplishments/verify/4EHBXUV4TPF7">Link</a></p>-->
-<!--            </dd>-->
-<!--            <dd class="clear"></dd>-->
             <dt id="volunteer">Volunteer experience</dt>
             <dd>
                 <h4>SuperGrandchildren at Happy Lunch </h4>
@@ -177,7 +141,7 @@
                 <p>Raised donates more than $270,000 for Kevlar helmets, a night vision scope, tactical goggles and other equipment, medical support for a combat engineers battery of the Ukrainian Armed Forces from Donetska region</p>
             </dd>
             <dd>
-                <h4>Chief Operation Officer, Co-owner <span>Charitable organization «Charity Foundation «LET'S SEE THE VICTORY», Kyiv - 01/2023 - Present</span></h4>
+                <h4>Co-owner <span>Charitable organization «Charity Foundation «LET'S SEE THE VICTORY», Kyiv - 01/2023 - Present</span></h4>
                 <p>The mission of our non-profit is to help people who have lost their sight regain sight, especially those who have lost sight due to the war. Because eye transplantation is not possible, people who have lost their sight and wish to regain vision are not most doctors’ first priority. The founders of this non-profit comprise of people who already know about this type of suffering, and want to change this. Vladyslav Yeschenko lost his eyes in the war, and Artem Pakhomov was looking for technologies that exist for lost eyesight, or are currently being researched abroad. Our research has found a procedure that can make a blind person partially sighted, but it is still being tested. The fund plans to cooperate with researchers of this technology or otherwise create conditions so that Ukrainians who have lost their sight have access to this technology. Adapting this technology is now the number one mission of the non-profit, and our foundation is in talks with researchers to expand its potential.</p>
             </dd>
         </dl>
