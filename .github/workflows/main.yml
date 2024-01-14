@@ -22,11 +22,14 @@ jobs:
             ${{ runner.os }}-composer-
       - name: Composer Install
         run: composer install --dev --no-interaction --no-ansi --prefer-dist --no-suggest --ignore-platform-reqs
-      - name: Build the docker-compose stack
-        run: docker-compose up -d
+      - name: Setup PHP with PECL extension
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: imagick, mbstring, gd
       - name: Create CV
         run: |
-          docker-compose exec -T creator php create.php
+          php ./create.php
       - name: Commit to the repo
         run: |
           git config --global user.name "omentes/cv"
