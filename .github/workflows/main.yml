@@ -32,8 +32,8 @@ jobs:
           php ./create.php
       - name: Commit to the repo
         run: |
-          git config --global user.name "omentes/cv"
-          git config --global user.email "cv[bot]@omentes.github.com"
+          git config --global user.name "setnemo/cv"
+          git config --global user.email "cv[bot]@setnemo.github.com"
           git add .
           # "echo" returns true so the build succeeds, even if no changed files
           git commit -m 'Update cv' || echo
